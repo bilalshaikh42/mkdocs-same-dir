@@ -12,7 +12,7 @@
         <link rel="canonical" href="https://oprypin.github.io/mkdocs-same-dir/index.html">
       
       <link rel="shortcut icon" href="assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.2.5">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.2.6">
     
     
       
@@ -20,10 +20,10 @@
       
     
     
-      <link rel="stylesheet" href="assets/stylesheets/main.15aa0b43.min.css">
+      <link rel="stylesheet" href="assets/stylesheets/main.cb6bc1d0.min.css">
       
         
-        <link rel="stylesheet" href="assets/stylesheets/palette.75751829.min.css">
+        <link rel="stylesheet" href="assets/stylesheets/palette.39b8e14a.min.css">
         
           
           
@@ -273,7 +273,6 @@
       
       
 
-
   
   
   
@@ -288,7 +287,6 @@
       
       
       
-
 
   
   
@@ -305,7 +303,6 @@
       
       
 
-
   
   
   
@@ -321,7 +318,6 @@
       
       
 
-
   
   
   
@@ -336,7 +332,6 @@
       
       
       
-
 
   
   
@@ -377,6 +372,19 @@
     Usage
   </a>
   
+    <nav class="md-nav" aria-label="Usage">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#important-notes" class="md-nav__link">
+    Important notes
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
     </ul>
@@ -414,7 +422,7 @@
 <h2 id="usage">Usage<a class="headerlink" href="#usage" title="Permanent link">#</a></h2>
 <p>Activate the plugin in <strong>mkdocs.yml</strong>, along with actually changing <code>docs_dir</code><br />
 (normally, MkDocs <em>absolutely wouldn't</em> let you set it to <code>.</code>):</p>
-<div class="highlight"><pre><span></span><code><span class="nt">site_name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">mkdocs-same-dir</span>
+<div class="highlight"><pre><span></span><code><span class="nt">site_name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">foo</span>
 <span class="nt">docs_dir</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">.</span>
 <span class="nt">site_dir</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">../site</span>
 
@@ -424,6 +432,9 @@
 </code></pre></div>
 <p>and now you can move this <strong>mkdocs.yml</strong> into your <strong>docs</strong> directory, or move your docs alongside <strong>mkdocs.yml</strong>.</p>
 <p><a href="https://github.com/oprypin/mkdocs-same-dir/tree/master/example"><strong>See example layout</strong></a></p>
+<h3 id="important-notes">Important notes<a class="headerlink" href="#important-notes" title="Permanent link">#</a></h3>
+<p>Another necessary effect of this plugin is that files <em>directly at the root</em> of the <strong>docs</strong> dir will no longer be picked up, unless they are Markdown files.</p>
+<p>And note that the <a href="https://github.com/oprypin/mkdocs-same-dir/blob/master/mkdocs_same_dir/plugin.py">implementation</a> of this plugin is a huge hack that monkeypatches MkDocs' internals. But I pledge to keep up with MkDocs updates and keep it working as long as that's still possible.</p>
                 
               
               
@@ -455,15 +466,15 @@
       
     </div>
     
-      <script src="assets/javascripts/vendor.93c04032.min.js"></script>
-      <script src="assets/javascripts/bundle.83e5331e.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
+      <script src="assets/javascripts/vendor.53cc9318.min.js"></script>
+      <script src="assets/javascripts/bundle.e9c9f54f.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
       
       <script>
         app = initialize({
           base: ".",
           features: ['navigation.tabs', 'toc.integrate'],
           search: Object.assign({
-            worker: "assets/javascripts/worker/search.8c7e0a7e.min.js"
+            worker: "assets/javascripts/worker/search.9c0e82ba.min.js"
           }, typeof search !== "undefined" && search)
         })
       </script>
